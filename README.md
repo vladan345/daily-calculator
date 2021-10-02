@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://vladan345.github.io/daily-calculator/)
+- Live Site URL: [Website](https://vladan345.github.io/daily-calculator/)
 
 ## My process
 
@@ -55,5 +55,5 @@ This project was more of a recap of basic javascript and DOM manipulation for me
 
 ## Author
 
-- Website - [vladan345](https://vladan345.github.io/daily-calculator/)
-- Frontend Mentor - [@vladan345](https://www.frontendmentor.io/profile/yourusername)
+- Website - [vladan345](https://github.com/vladan345)
+- Frontend Mentor - [@vladan345](https://www.frontendmentor.io/profile/vladan345)
