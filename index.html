@@ -1,26 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Calculator app</title>
+  </head>
+  <body>
+    <div class="calculator">
+      <header>
+        <h1>calc</h1>
+        <div class="themes">
+          <div class="number-labels">
+            <p>1</p>
+            <p>2</p>
+            <p>3</p>
+          </div>
+          <div class="toggle">
+            <p class="toggle-label">THEME</p>
+            <div class="toggle-switch">
+              <div class="circle theme1"></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="display">
+        <p class="display-number">0</p>
+      </div>
+      <div class="keypad">
+        <p class="regular-key">7</pclass>
+        <p class="regular-key">8</p>
+        <p class="regular-key">9</p>
+        <p id="delete-btn">DEL</p>
+        <!------------------------------>
+        <p class="regular-key">4</p>
+        <p class="regular-key">5</p>
+        <p class="regular-key">6</p>
+        <p class="regular-key">+</p>
+        <!------------------------------>
+        <p class="regular-key">1</p>
+        <p class="regular-key">2</p>
+        <p class="regular-key">3</p>
+        <p class="regular-key">-</p>
+        <!------------------------------>
+        <p class="regular-key">.</p>
+        <p class="regular-key">0</p>
+        <p class="regular-key">/</p>
+        <p class="regular-key">x</p>
+        <!------------------------------>
+        <p id="reset-btn">RESET</p>
+        <p id="equal-btn">=</p>
+      </div>
+    </div>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="https://github.com/vladan345">Vladan345</a>.
+      </div>
+    </footer>
+    <script src="app.js"></script>
+  </body>
 </html>

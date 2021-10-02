@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;700&display=swap');
+/* VARIABLES */
+/*************/
+
+:root {
+  --main-bg: hsl(222, 26%, 31%);
+  --keypad-bg: hsl(223, 31%, 20%);
+  --display-bg: hsl(224, 36%, 15%);
+  /**********/
+  --special-keys: hsl(225, 21%, 49%);
+  --special-shadow: hsl(224, 28%, 35%);
+  --equals: hsl(6, 63%, 50%);
+  --equals-shadow: hsl(6, 70%, 34%);
+  --regular-keys: hsl(30, 25%, 89%);
+  --regular-shadow: hsl(28, 16%, 65%);
+  /**********/
+  --regular-text: hsl(221, 14%, 31%);
+  --special-text: hsl(0, 0%, 100%);
+  --equals-text: hsl(0, 0%, 100%);
+  --body-text: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+.attribution {
+  font-size: 1.1rem;
+  text-align: center;
+}
+.attribution a {
+  color: var(--equals);
+}
+body {
+  background: var(--main-bg);
+  font-family: 'Spartan', sans-serif;
+  font-weight: 700;
+  color: var(--body-text);
+  height: 100vh;
+}
+.calculator {
+  max-width: 54rem;
+  margin: 0 auto;
+  padding: 5rem 0;
+}
+
+/* HEADER */
+/**********/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 3rem;
+}
+h1 {
+  font-size: 3.2rem;
+}
+
+.themes {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.number-labels {
+  font-size: 1.2rem;
+  width: 6.8rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.toggle {
+  display: flex;
+  align-items: center;
+}
+.toggle-label {
+  font-size: 1.2rem;
+  letter-spacing: 1.5px;
+}
+.toggle-switch {
+  width: 7rem;
+  height: 2.4rem;
+  background: var(--keypad-bg);
+  border-radius: 5rem;
+  margin-left: 2rem;
+  position: relative;
+  cursor: pointer;
+}
+.circle {
+  background: var(--equals);
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  transition: 0.3s;
+}
+
+.theme1 {
+  left: 18%;
+}
+.theme2 {
+  left: 50%;
+}
+.theme3 {
+  left: 82%;
+}
+/* DISPLAY */
+/**********/
+.display {
+  width: 100%;
+  background: var(--display-bg);
+  height: 13rem;
+  border-radius: 1rem;
+  padding: 4rem 3rem 0 3rem;
+  margin-bottom: 2rem;
+}
+.display-number {
+  color: var(--body-text);
+  font-size: 4.5rem;
+  text-align: right;
+  overflow: hidden;
+}
+
+/* KEYPAD */
+/**********/
+.keypad {
+  width: 100%;
+  background: var(--keypad-bg);
+  border-radius: 1rem;
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: repeat(4, 10rem);
+  grid-template-rows: repeat(5, 6rem);
+  gap: 2.6rem;
+}
+.keypad p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.2rem;
+  border-radius: 1rem;
+  background: var(--regular-keys);
+  color: var(--regular-text);
+  box-shadow: 0 0.5rem var(--regular-shadow);
+  cursor: pointer;
+}
+.keypad p:hover {
+  margin-top: 0.5rem;
+  box-shadow: 0 0.5rem var(--regular-keys);
+}
+#delete-btn {
+  background: var(--special-keys);
+  box-shadow: 0 0.5rem var(--special-shadow);
+  color: var(--special-text);
+  font-size: 2rem;
+}
+#reset-btn {
+  grid-column-start: span 2;
+  background: var(--special-keys);
+  box-shadow: 0 0.5rem var(--special-shadow);
+  color: var(--special-text);
+  font-size: 2rem;
+}
+#delete-btn:hover,
+#reset-btn:hover {
+  margin-top: 0.5rem;
+  box-shadow: 0 0.5rem var(--special-keys);
+}
+#equal-btn {
+  grid-column-start: span 2;
+  background: var(--equals);
+  box-shadow: 0 0.5rem var(--equals-shadow);
+  color: var(--equals-text);
+  font-size: 2rem;
+}
+#equal-btn:hover {
+  margin-top: 0.5rem;
+  box-shadow: 0 0.5rem var(--equals);
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 50%;
+  }
+  .calculator {
+    padding: 2rem;
+  }
+  .keypad {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 6rem);
+    gap: 2rem;
+  }
+}
